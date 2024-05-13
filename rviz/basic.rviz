@@ -15,6 +15,12 @@ Visualization Manager:
       Description Topic:
         Value: /robot_description
       Enabled: true
+      Links:
+        All Links Enabled: true
+        Expand Joint Details: false
+        Expand Link Details: false
+        Expand Tree: false
+        Link Tree Style: Links in Alphabetic Order
       Name: RobotModel
       Value: true
     - Class: rviz_default_plugins/TF
