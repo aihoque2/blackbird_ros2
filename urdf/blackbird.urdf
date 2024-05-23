@@ -376,7 +376,7 @@
       <parent link="torso"/>
       <child link="l_ab_ad"/>
       <axis xyz="0 -1.0 0"/>
-      <limit lower="-2" upper="2" effort="0" velocity="0"/>
+      <limit lower="-2" upper="2" effort="50" velocity="20"/>
     </joint>
 
     <joint name="l_foot" type="revolute">
@@ -384,7 +384,7 @@
       <parent link="l_lower"/>
       <child link="l_foot"/>
       <axis xyz="1.0 0 0"/>
-      <limit lower="-1.5708" upper="0.69813" effort="0" velocity="0"/>
+      <limit lower="-1.5708" upper="0.69813" effort="50" velocity="20"/>
     </joint>
 
     <joint name="l_lower" type="revolute">
@@ -392,7 +392,7 @@
       <parent link="l_upper"/>
       <child link="l_lower"/>
       <axis xyz="1.0 0 0"/>
-      <limit lower="-2.0944" upper="0.34907" effort="0" velocity="0"/>
+      <limit lower="-2.0944" upper="0.34907" effort="50" velocity="20"/>
     </joint>
 
     <joint name="l_upper" type="revolute">
@@ -400,7 +400,7 @@
       <parent link="l_yaw"/>
       <child link="l_upper"/>
       <axis xyz="1.0 0 0"/>
-      <limit lower="-1.91986" upper="1.22173" effort="0" velocity="0"/>
+      <limit lower="-1.91986" upper="1.22173" effort="50" velocity="20"/>
     </joint>
 
     <joint name="l_yaw" type="revolute">
@@ -408,7 +408,7 @@
       <parent link="l_ab_ad"/>
       <child link="l_yaw"/>
       <axis xyz="0 0 1.0"/>
-      <limit lower="-2" upper="2" effort="0" velocity="0"/>
+      <limit lower="-2" upper="2" effort="50" velocity="20"/>
     </joint>
 
     <joint name="r_ab_ad" type="revolute">
@@ -416,7 +416,7 @@
       <parent link="torso"/>
       <child link="r_ab_ad"/>
       <axis xyz="0 -1.0 0"/>
-      <limit lower="-2" upper="2" effort="0" velocity="0"/>
+      <limit lower="-2" upper="2" effort="50" velocity="20"/>
     </joint>
 
     <joint name="r_foot" type="revolute">
@@ -424,7 +424,7 @@
       <parent link="r_lower"/>
       <child link="r_foot"/>
       <axis xyz="1.0 0 0"/>
-      <limit lower="-1.5708" upper="0.69813" effort="0" velocity="0"/>
+      <limit lower="-1.5708" upper="0.69813" effort="50" velocity="20"/>
     </joint>
 
     <joint name="r_lower" type="revolute">
@@ -432,7 +432,7 @@
       <parent link="r_upper"/>
       <child link="r_lower"/>
       <axis xyz="1.0 0 0"/>
-      <limit lower="-2.0944" upper="0.34907" effort="0" velocity="0"/>
+      <limit lower="-2.0944" upper="0.34907" effort="50" velocity="20"/>
     </joint>
 
     <joint name="r_upper" type="revolute">
@@ -440,7 +440,7 @@
       <parent link="r_yaw"/>
       <child link="r_upper"/>
       <axis xyz="1.0 0 0"/>
-      <limit lower="-1.91986" upper="1.22173" effort="0" velocity="0"/>
+      <limit lower="-1.91986" upper="1.22173" effort="50" velocity="20"/>
     </joint>
 
     <joint name="r_yaw" type="revolute">
@@ -448,7 +448,7 @@
       <parent link="r_ab_ad"/>
       <child link="r_yaw"/>
       <axis xyz="0 0 1.0"/>
-      <limit lower="-2" upper="2" effort="0" velocity="0"/>
+      <limit lower="-2" upper="2" effort="50" velocity="20"/>
     </joint>
 
     <material name="Material">
