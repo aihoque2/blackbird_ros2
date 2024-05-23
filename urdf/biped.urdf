@@ -16,7 +16,7 @@
 	    <visual>
 	      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 	      <geometry>
-	        <mesh filename="package://ETH_biped/meshes/leg/hipassembly.dae" scale="1 1 1"/>
+	        <mesh filename="package://ETH_biped/meshes/ETH/leg/hipassembly.dae" scale="1 1 1"/>
 	      </geometry>
 	      <material name="white"/>
 	    </visual>        
@@ -25,7 +25,7 @@
 	    <visual>
 	      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 	      <geometry>   
-	        <mesh filename="package://ETH_biped/meshes/leg/upperleg.dae" scale="1 1 1"/>
+	        <mesh filename="package://ETH_biped/meshes/ETH/leg/upperleg.dae" scale="1 1 1"/>
 	      </geometry>
 	      <material name="blue"/>
 	    </visual>
@@ -33,7 +33,7 @@
     <link name="L_lowerleg">
 	    <visual>
 	      <geometry>
-	        <mesh filename="package://ETH_biped/meshes/leg/lowerleg.dae" scale="1 1 1"/>
+	        <mesh filename="package://ETH_biped/meshes/ETH/leg/lowerleg.dae" scale="1 1 1"/>
 	      </geometry>
 	      <material name="blue"/>
 	    </visual>        
@@ -68,7 +68,7 @@
       <visual>
         <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
         <geometry>
-          <mesh filename="package://ETH_biped/meshes/leg/hipassembly.dae" scale="1 1 1"/>
+          <mesh filename="package://ETH_biped/meshes/ETH/leg/hipassembly.dae" scale="1 1 1"/>
         </geometry>
         <material name="white"/>
       </visual>        
@@ -77,7 +77,7 @@
       <visual>
         <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
         <geometry>
-          <mesh filename="package://ETH_biped/meshes/leg/upperleg.dae" scale="1 1 1"/>
+          <mesh filename="package://ETH_biped/meshes/ETH/leg/upperleg.dae" scale="1 1 1"/>
         </geometry>
         <material name="blue"/>
       </visual>
@@ -85,7 +85,7 @@
     <link name="R_lowerleg">
       <visual>
         <geometry>
-          <mesh filename="package://ETH_biped/meshes/leg/lowerleg.dae" scale="1 1 1"/>
+          <mesh filename="package://ETH_biped/meshes/ETH/leg/lowerleg.dae" scale="1 1 1"/>
         </geometry>
         <material name="blue"/>
       </visual>        
