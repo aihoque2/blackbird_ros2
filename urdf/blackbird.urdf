@@ -2,6 +2,20 @@
 <!-- created with Phobos 0.7 -->
   <robot name="blackbird">
 
+  <!-- defube some colors -->
+  
+      <material
+        name="ceramic">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+
+      <material
+        name="teal">
+        <color
+          rgba="0.184313 0.92157 0.92157 1" />
+      </material>
+
     <link name="l_ab_ad">
       <inertial>
         <origin xyz="8e-05 0.02446 -0.00146" rpy="0 0 0"/>
@@ -34,7 +48,7 @@
         <geometry>
           <cylinder radius="0.01" length="0.04"/>
         </geometry>
-        <material name="Material"/>
+        <material name="ceramic"/>
       </visual>
       <visual name="Cylinder.001">
         <origin xyz="0 0.07 -0.05247" rpy="1.5708 0 0"/>
@@ -188,7 +202,7 @@
         <geometry>
           <cylinder radius="0.01" length="0.04"/>
         </geometry>
-        <material name="Material"/>
+        <material name="ceramic"/>
       </visual>
       <visual name="Cylinder.003">
         <origin xyz="0 -0.07 -0.05247" rpy="1.5708 0 0"/>
@@ -321,14 +335,14 @@
         <geometry>
           <mesh filename="package://ETH_biped/meshes/blackbird/Assembly_Mockup_v27_001.stl" scale="1.0 1.0 1.0"/>
         </geometry>
-        <material name="Material"/>
+        <material name="teal"/>
       </visual>
       <visual name="mesh.013">
         <origin xyz="-1e-05 0.10381 0.00587" rpy="0 0 0"/>
         <geometry>
           <mesh filename="package://ETH_biped/meshes/blackbird/Assembly_Mockup_v27_016.stl" scale="1.0 1.0 1.0"/>
         </geometry>
-        <material name="Material"/>
+        <material name="Black"/>
       </visual>
       <visual name="mesh.014">
         <origin xyz="0 -0.071 0.005" rpy="0 0 0"/>
