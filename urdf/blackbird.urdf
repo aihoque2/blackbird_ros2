@@ -16,6 +16,8 @@
           rgba="0.184313 0.92157 0.92157 1" />
       </material>
 
+    <link name="world"/>
+
     <link name="l_ab_ad">
       <inertial>
         <origin xyz="8e-05 0.02446 -0.00146" rpy="0 0 0"/>
@@ -451,8 +453,15 @@
       <limit lower="-2" upper="2" effort="50" velocity="20"/>
     </joint>
 
+    <joint name="world_to_torso" type="fixed">
+        <origin rpy="0 0 0" xyz="0 0 1"/>
+        <parent link="world"/>
+        <child link="torso"/>
+    </joint>
+
     <material name="Material">
       <color rgba="0.25 0.25 0.25 1.0"/>
     </material>
+
 
   </robot>

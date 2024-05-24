@@ -2,8 +2,11 @@
 <!-- created with Phobos 0.7 -->
   <robot name="blackbird">
 
-  <!-- defube some colors -->
-  
+  <!-- define some colors -->
+      <material name="Material">
+      <color rgba="0.25 0.25 0.25 1.0"/>
+    </material>
+
       <material
         name="ceramic">
         <color
@@ -323,6 +326,8 @@
         </geometry>
       </collision>
     </link>
+    
+    <link name="world"/>
 
     <link name="torso">
       <inertial>
@@ -342,7 +347,7 @@
         <geometry>
           <mesh filename="package://ETH_biped/meshes/blackbird/Assembly_Mockup_v27_016.stl" scale="1.0 1.0 1.0"/>
         </geometry>
-        <material name="Black"/>
+        <material name="Material"/>
       </visual>
       <visual name="mesh.014">
         <origin xyz="0 -0.071 0.005" rpy="0 0 0"/>
@@ -451,11 +456,23 @@
       <limit lower="-2" upper="2" effort="50" velocity="20"/>
     </joint>
 
-    <material name="Material">
-      <color rgba="0.25 0.25 0.25 1.0"/>
-    </material>
 
-    <ros2_control name="IgnitionSystem" type="system"></ros2_control>
+    <joint name="world_to_torso" type="fixed">
+        <origin rpy="0 0 0" xyz="0 0 1"/>
+        <parent link="torso"/>
+        <child link="slideBar"/>
+    </joint>
+
+
+    <ros2_control name="IgnitionSystem" type="system">
+        <hardware>
+        <plugin>ign_ros2_control/IgnitionSystem</plugin>
+        </hardware>
+
+        <!-- define our hardware interfaces -->
+        <joint></joint>
+    
+    </ros2_control>
 
 
   </robot>
