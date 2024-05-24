@@ -28,7 +28,7 @@ Visualization Manager:
       Value: true
   Global Options:
     Fixed Frame: world
-    Frame Rate: 30
+    Frame Rate: 60
   Name: root
   Tools:
     - Class: rviz_default_plugins/MoveCamera
@@ -36,7 +36,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz_default_plugins/Orbit
-      Distance: 1.7
+      Distance: 4
       Name: Current View
       Pitch: 0.33
       Value: Orbit (rviz)
