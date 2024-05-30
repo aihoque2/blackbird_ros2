@@ -10,7 +10,7 @@ from launch_ros.parameter_descriptions import ParameterValue
 
 def generate_launch_description():
     pkg_path = get_package_share_path('ETH_biped')
-    default_model_path = pkg_path / 'urdf/blackbird_ign.urdf'
+    default_model_path = pkg_path / 'urdf/blackbird.urdf'
     default_rviz_config_path = pkg_path / 'rviz/blackbird.rviz'
 
     gui_arg = DeclareLaunchArgument(name='gui', default_value='true', choices=['true', 'false'],
