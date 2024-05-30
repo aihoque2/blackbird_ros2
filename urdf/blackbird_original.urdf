@@ -1,23 +1,6 @@
 <?xml version="1.0"?>
 <!-- created with Phobos 0.7 -->
-  <robot name="blackbird">
-
-  <!-- define some colors -->
-      <material name="Material">
-      <color rgba="0.25 0.25 0.25 1.0"/>
-    </material>
-
-      <material
-        name="ceramic">
-        <color
-          rgba="0.79216 0.81961 0.93333 1" />
-      </material>
-
-      <material
-        name="teal">
-        <color
-          rgba="0.184313 0.92157 0.92157 1" />
-      </material>
+  <robot name="biped">
 
     <link name="l_ab_ad">
       <inertial>
@@ -28,7 +11,7 @@
       <visual name="mesh.002">
         <origin xyz="8e-05 0.02446 -0.00146" rpy="0 0 0"/>
         <geometry>
-          <mesh filename="file://meshes/blackbird/Assembly_Mockup_v27_003.stl" scale="1.0 1.0 1.0"/>
+          <mesh filename="../meshes/stl/Assembly Mockup v27.003.stl" scale="1.0 1.0 1.0"/>
         </geometry>
         <material name="Material"/>
       </visual>
@@ -51,7 +34,7 @@
         <geometry>
           <cylinder radius="0.01" length="0.04"/>
         </geometry>
-        <material name="ceramic"/>
+        <material name="Material"/>
       </visual>
       <visual name="Cylinder.001">
         <origin xyz="0 0.07 -0.05247" rpy="1.5708 0 0"/>
@@ -91,7 +74,7 @@
       <visual name="mesh.009">
         <origin xyz="0 0.00325 -0.02828" rpy="0 0 0"/>
         <geometry>
-          <mesh filename="file://meshes/blackbird/Assembly_Mockup_v27_012.stl" scale="1.0 1.0 1.0"/>
+          <mesh filename="../meshes/stl/Assembly Mockup v27.012.stl" scale="1.0 1.0 1.0"/>
         </geometry>
         <material name="Material"/>
       </visual>
@@ -118,14 +101,14 @@
       <visual name="mesh.008">
         <origin xyz="-0.0001 0.00125 -0.14482" rpy="0 0 0"/>
         <geometry>
-          <mesh filename="file://meshes/blackbird/Assembly_Mockup_v27_011.stl" scale="1.0 1.0 1.0"/>
+          <mesh filename="../meshes/stl/Assembly Mockup v27.011.stl" scale="1.0 1.0 1.0"/>
         </geometry>
         <material name="Material"/>
       </visual>
       <visual name="mesh.011">
         <origin xyz="0.05162 0.03693 -0.07685" rpy="0 0 0"/>
         <geometry>
-          <mesh filename="file://meshes/blackbird/Assembly_Mockup_v27_014.stl" scale="1.0 1.0 1.0"/>
+          <mesh filename="../meshes/stl/Assembly Mockup v27.014.stl" scale="1.0 1.0 1.0"/>
         </geometry>
         <material name="Material"/>
       </visual>
@@ -146,7 +129,7 @@
       <visual name="mesh.010">
         <origin xyz="0.00043 0.04822 -0.10773" rpy="0 0 0"/>
         <geometry>
-          <mesh filename="file://meshes/blackbird/Assembly_Mockup_v27_013.stl" scale="1.0 1.0 1.0"/>
+          <mesh filename="../meshes/stl/Assembly Mockup v27.013.stl" scale="1.0 1.0 1.0"/>
         </geometry>
         <material name="Material"/>
       </visual>
@@ -161,7 +144,7 @@
       <visual name="mesh.004">
         <origin xyz="0 0 0.03518" rpy="0 0 0"/>
         <geometry>
-          <mesh filename="file://meshes/blackbird/Assembly_Mockup_v27_005.stl" scale="1.0 1.0 1.0"/>
+          <mesh filename="../meshes/stl/Assembly Mockup v27.005.stl" scale="1.0 1.0 1.0"/>
         </geometry>
         <material name="Material"/>
       </visual>
@@ -182,7 +165,7 @@
       <visual name="mesh.003">
         <origin xyz="-8e-05 0.02445 -0.00143" rpy="0 0 0"/>
         <geometry>
-          <mesh filename="file://meshes/blackbird/Assembly_Mockup_v27_004.stl" scale="1.0 1.0 1.0"/>
+          <mesh filename="../meshes/stl/Assembly Mockup v27.004.stl" scale="1.0 1.0 1.0"/>
         </geometry>
         <material name="Material"/>
       </visual>
@@ -205,7 +188,7 @@
         <geometry>
           <cylinder radius="0.01" length="0.04"/>
         </geometry>
-        <material name="ceramic"/>
+        <material name="Material"/>
       </visual>
       <visual name="Cylinder.003">
         <origin xyz="0 -0.07 -0.05247" rpy="1.5708 0 0"/>
@@ -245,7 +228,7 @@
       <visual name="mesh">
         <origin xyz="0 0.00325 -0.02828" rpy="0 0 0"/>
         <geometry>
-          <mesh filename="file://meshes/blackbird/Assembly_Mockup_v27.stl" scale="1.0 1.0 1.0"/>
+          <mesh filename="../meshes/stl/Assembly Mockup v27.stl" scale="1.0 1.0 1.0"/>
         </geometry>
         <material name="Material"/>
       </visual>
@@ -272,14 +255,14 @@
       <visual name="mesh.007">
         <origin xyz="-0.00018 0.00049 -0.14674" rpy="0 0 0"/>
         <geometry>
-          <mesh filename="file://meshes/blackbird/Assembly_Mockup_v27_010.stl" scale="1.0 1.0 1.0"/>
+          <mesh filename="../meshes/stl/Assembly Mockup v27.010.stl" scale="1.0 1.0 1.0"/>
         </geometry>
         <material name="Material"/>
       </visual>
       <visual name="mesh.012">
         <origin xyz="-0.05162 0.03692 -0.07686" rpy="0 0 0"/>
         <geometry>
-          <mesh filename="file://meshes/blackbird/Assembly_Mockup_v27_015.stl" scale="1.0 1.0 1.0"/>
+          <mesh filename="../meshes/stl/Assembly Mockup v27.015.stl" scale="1.0 1.0 1.0"/>
         </geometry>
         <material name="Material"/>
       </visual>
@@ -300,7 +283,7 @@
       <visual name="mesh.006">
         <origin xyz="-0.00228 0.0512 -0.11337" rpy="0 0 0"/>
         <geometry>
-          <mesh filename="file://meshes/blackbird/Assembly_Mockup_v27_009.stl" scale="1.0 1.0 1.0"/>
+          <mesh filename="../meshes/stl/Assembly Mockup v27.009.stl" scale="1.0 1.0 1.0"/>
         </geometry>
         <material name="Material"/>
       </visual>
@@ -315,7 +298,7 @@
       <visual name="mesh.005">
         <origin xyz="0 0 0.03517" rpy="0 0 0"/>
         <geometry>
-          <mesh filename="file://meshes/blackbird/Assembly_Mockup_v27_006.stl" scale="1.0 1.0 1.0"/>
+          <mesh filename="../meshes/stl/Assembly Mockup v27.006.stl" scale="1.0 1.0 1.0"/>
         </geometry>
         <material name="Material"/>
       </visual>
@@ -326,8 +309,6 @@
         </geometry>
       </collision>
     </link>
-    
-    <link name="world"/>
 
     <link name="torso">
       <inertial>
@@ -338,21 +319,21 @@
       <visual name="mesh.001">
         <origin xyz="0 -0.09385 0.03683" rpy="0 0 0"/>
         <geometry>
-          <mesh filename="file://meshes/blackbird/Assembly_Mockup_v27_001.stl" scale="1.0 1.0 1.0"/>
+          <mesh filename="../meshes/stl/Assembly Mockup v27.001.stl" scale="1.0 1.0 1.0"/>
         </geometry>
-        <material name="teal"/>
+        <material name="Material"/>
       </visual>
       <visual name="mesh.013">
         <origin xyz="-1e-05 0.10381 0.00587" rpy="0 0 0"/>
         <geometry>
-          <mesh filename="file://meshes/blackbird/Assembly_Mockup_v27_016.stl" scale="1.0 1.0 1.0"/>
+          <mesh filename="../meshes/stl/Assembly Mockup v27.016.stl" scale="1.0 1.0 1.0"/>
         </geometry>
         <material name="Material"/>
       </visual>
       <visual name="mesh.014">
         <origin xyz="0 -0.071 0.005" rpy="0 0 0"/>
         <geometry>
-          <mesh filename="file://meshes/blackbird/Assembly_Mockup_v27_017.stl" scale="1.0 1.0 1.0"/>
+          <mesh filename="../meshes/stl/Assembly Mockup v27.017.stl" scale="1.0 1.0 1.0"/>
         </geometry>
         <material name="Material"/>
       </visual>
@@ -376,222 +357,88 @@
       </collision>
     </link>
 
-    <joint name="l_hip_pitch" type="revolute">
+    <joint name="l_ab_ad" type="revolute">
       <origin xyz="0.15 0 0" rpy="0 0 0"/>
       <parent link="torso"/>
       <child link="l_ab_ad"/>
       <axis xyz="0 -1.0 0"/>
-      <limit lower="-2" upper="2" effort="50" velocity="20"/>
+      <limit lower="-2" upper="2" effort="0" velocity="0"/>
     </joint>
 
-    <joint name="l_ankle" type="revolute">
+    <joint name="l_foot" type="revolute">
       <origin xyz="0 -0.1529 -0.42302" rpy="0 0 0"/>
       <parent link="l_lower"/>
       <child link="l_foot"/>
       <axis xyz="1.0 0 0"/>
-      <limit lower="-1.5708" upper="0.69813" effort="50" velocity="20"/>
+      <limit lower="-1.5708" upper="0.69813" effort="0" velocity="0"/>
     </joint>
 
-    <joint name="l_knee" type="revolute">
+    <joint name="l_lower" type="revolute">
       <origin xyz="0 0.1529 -0.42302" rpy="0 0 0"/>
       <parent link="l_upper"/>
       <child link="l_lower"/>
       <axis xyz="1.0 0 0"/>
-      <limit lower="-2.0944" upper="0.34907" effort="50" velocity="20"/>
+      <limit lower="-2.0944" upper="0.34907" effort="0" velocity="0"/>
     </joint>
 
-    <joint name="l_hip_roll" type="revolute">
+    <joint name="l_upper" type="revolute">
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <parent link="l_yaw"/>
       <child link="l_upper"/>
       <axis xyz="1.0 0 0"/>
-      <limit lower="-1.91986" upper="1.22173" effort="50" velocity="20"/>
+      <limit lower="-1.91986" upper="1.22173" effort="0" velocity="0"/>
     </joint>
 
-    <joint name="l_hip_yaw" type="revolute">
+    <joint name="l_yaw" type="revolute">
       <origin xyz="0 0 -0.1295" rpy="0 0 0"/>
       <parent link="l_ab_ad"/>
       <child link="l_yaw"/>
       <axis xyz="0 0 1.0"/>
-      <limit lower="-2" upper="2" effort="50" velocity="20"/>
+      <limit lower="-2" upper="2" effort="0" velocity="0"/>
     </joint>
 
-    <joint name="r_hip_pitch" type="revolute">
+    <joint name="r_ab_ad" type="revolute">
       <origin xyz="-0.15 0 0" rpy="0 0 0"/>
       <parent link="torso"/>
       <child link="r_ab_ad"/>
       <axis xyz="0 -1.0 0"/>
-      <limit lower="-2" upper="2" effort="50" velocity="20"/>
+      <limit lower="-2" upper="2" effort="0" velocity="0"/>
     </joint>
 
-    <joint name="r_ankle" type="revolute">
+    <joint name="r_foot" type="revolute">
       <origin xyz="0 -0.1529 -0.42302" rpy="0 0 0"/>
       <parent link="r_lower"/>
       <child link="r_foot"/>
       <axis xyz="1.0 0 0"/>
-      <limit lower="-1.5708" upper="0.69813" effort="50" velocity="20"/>
+      <limit lower="-1.5708" upper="0.69813" effort="0" velocity="0"/>
     </joint>
 
-    <joint name="r_knee" type="revolute">
+    <joint name="r_lower" type="revolute">
       <origin xyz="0 0.1529 -0.42302" rpy="0 0 0"/>
       <parent link="r_upper"/>
       <child link="r_lower"/>
       <axis xyz="1.0 0 0"/>
-      <limit lower="-2.0944" upper="0.34907" effort="50" velocity="20"/>
+      <limit lower="-2.0944" upper="0.34907" effort="0" velocity="0"/>
     </joint>
 
-    <joint name="r_hip_roll" type="revolute">
+    <joint name="r_upper" type="revolute">
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <parent link="r_yaw"/>
       <child link="r_upper"/>
       <axis xyz="1.0 0 0"/>
-      <limit lower="-1.91986" upper="1.22173" effort="50" velocity="20"/>
+      <limit lower="-1.91986" upper="1.22173" effort="0" velocity="0"/>
     </joint>
 
-    <joint name="r_hip_yaw" type="revolute">
+    <joint name="r_yaw" type="revolute">
       <origin xyz="0 0 -0.1295" rpy="0 0 0"/>
       <parent link="r_ab_ad"/>
       <child link="r_yaw"/>
       <axis xyz="0 0 1.0"/>
-      <limit lower="-2" upper="2" effort="50" velocity="20"/>
+      <limit lower="-2" upper="2" effort="0" velocity="0"/>
     </joint>
 
-
-    <joint name="world_to_torso" type="fixed">
-        <origin rpy="0 0 0" xyz="0 0 1"/>
-        <parent link="world"/>
-        <child link="torso"/>
-    </joint>
-
-
-    <ros2_control name="IgnitionSystem" type="system">
-        <hardware>
-        <plugin>ign_ros2_control/IgnitionSystem</plugin>
-        </hardware>
-
-        <!-- define our hardware interfaces -->
-        
-        <!-- left side -->
-        <joint name="l_hip_pitch">
-            <command_interface name="effort">
-                <param name="min">-50</param>
-                <param name="max">50</param>
-            </command_interface>
-
-            <state_interface name="position"/>
-            <state_interface name="velocity"/>
-            <state_interface name="effort"/>
-        </joint>
-
-        <joint name="l_hip_yaw">
-            <command_interface name="effort">
-                <param name="min">-50</param>
-                <param name="max">50</param>
-            </command_interface>
-
-            <state_interface name="position"/>
-            <state_interface name="velocity"/>
-            <state_interface name="effort"/>
-        </joint>
-
-        <joint name="l_hip_roll">
-            <command_interface name="effort">
-                <param name="min">-50</param>
-                <param name="max">50</param>
-            </command_interface>
-
-            <state_interface name="position"/>
-            <state_interface name="velocity"/>
-            <state_interface name="effort"/>
-        </joint>
-
-        <joint name="l_knee">
-            <command_interface name="effort">
-                <param name="min">-50</param>
-                <param name="max">50</param>
-            </command_interface>
-
-            <state_interface name="position"/>
-            <state_interface name="velocity"/>
-            <state_interface name="effort"/>
-        </joint>
-
-        <joint name="l_ankle">
-            <command_interface name="effort">
-                <param name="min">-50</param>
-                <param name="max">50</param>
-            </command_interface>
-
-            <state_interface name="position"/>
-            <state_interface name="velocity"/>
-            <state_interface name="effort"/>
-        </joint>
-
-        <!-- right side -->
-        <joint name="r_hip_pitch">
-            <command_interface name="effort">
-                <param name="min">-50</param>
-                <param name="max">50</param>
-            </command_interface>
-
-            <state_interface name="position"/>
-            <state_interface name="velocity"/>
-            <state_interface name="effort"/>
-        </joint>
-
-        <joint name="r_hip_yaw">
-            <command_interface name="effort">
-                <param name="min">-50</param>
-                <param name="max">50</param>
-            </command_interface>
-
-            <state_interface name="position"/>
-            <state_interface name="velocity"/>
-            <state_interface name="effort"/>
-        </joint>
-
-        <joint name="r_hip_roll">
-            <command_interface name="effort">
-                <param name="min">-50</param>
-                <param name="max">50</param>
-            </command_interface>
-
-            <state_interface name="position"/>
-            <state_interface name="velocity"/>
-            <state_interface name="effort"/>
-        </joint>
-        
-        <joint name="r_knee">
-            <command_interface name="effort">
-                <param name="min">-50</param>
-                <param name="max">50</param>
-            </command_interface>
-
-            <state_interface name="position"/>
-            <state_interface name="velocity"/>
-            <state_interface name="effort"/>
-        </joint>
-
-        <joint name="r_ankle">
-            <command_interface name="effort">
-                <param name="min">-50</param>
-                <param name="max">50</param>
-            </command_interface>
-
-            <state_interface name="position"/>
-            <state_interface name="velocity"/>
-            <state_interface name="effort"/>
-        </joint>
-    
-    </ros2_control>
-
-    <gazebo>
-    <!-- Joint State Publisher -->
-    <plugin filename="ign_ros2_control-system" name="ign_ros2_control::IgnitionROS2ControlPlugin">
-      <parameters>/home/ahoque245/workspaces/ros2_ws/src/ETH_biped/config/blackbird_effort_controller.yaml</parameters>
-    </plugin>
-
-    </gazebo>
-
+    <material name="Material">
+      <color rgba="0.25 0.25 0.25 1.0"/>
+    </material>
 
   </robot>

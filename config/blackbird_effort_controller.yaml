@@ -11,16 +11,16 @@ controller_manager:
 effort_controller:
   ros__parameters:
     joints:
-      - l_ab_ad
-      - l_yaw
-      - l_upper
-      - l_lower
-      - l_foot
-      - r_ab_ad
-      - r_yaw
-      - r_upper
-      - r_lower
-      - r_foot
+      - l_hip_pitch
+      - l_hip_yaw
+      - l_hip_roll
+      - l_knee
+      - l_ankle
+      - r_hip_pitch
+      - r_hip_yaw
+      - r_hip_roll
+      - r_knee
+      - r_ankle
 
     command_interfaces:
       - effort
