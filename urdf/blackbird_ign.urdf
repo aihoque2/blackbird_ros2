@@ -586,8 +586,8 @@
     </ros2_control>
 
     <gazebo>
-    <!-- Joint State Publisher -->
     <plugin filename="ign_ros2_control-system" name="ign_ros2_control::IgnitionROS2ControlPlugin">
+          <!-- Bad partices -->
       <parameters>/home/ahoque245/workspaces/ros2_ws/src/ETH_biped/config/blackbird_effort_controller.yaml</parameters>
     </plugin>
 
