@@ -16,12 +16,26 @@ find_package(geometry_msgs REQUIRED)
 # further dependencies manually.
 # find_package(<dependency> REQUIRED)
 
+add_executable(effort_example_cpp src/effort_example.cpp)
+ament_target_dependencies(effort_example_cpp rclcpp std_msgs)
+
+add_executable(reverse_effort_cpp src/reverse_effort.cpp)
+ament_target_dependencies(reverse_effort_cpp rclcpp std_msgs)
+
+# directory install
 install(
   DIRECTORY 
-  launch rviz urdf meshes config
+  launch rviz urdf meshes config src
   
   DESTINATION 
   share/${PROJECT_NAME}/
+)
+
+# C++ install
+install(TARGETS
+  effort_example_cpp
+  reverse_effort_cpp
+  DESTINATION lib/${PROJECT_NAME}
 )
 
 
