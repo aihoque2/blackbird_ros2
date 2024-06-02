@@ -14,7 +14,7 @@ class JointPub: public rclcpp::Node{
             timer_ = this->create_wall_timer(std::chrono::milliseconds(500), std::bind(&JointPub::timer_callback, this));
             force_flag_ = true;
             rest_ = std::vector<double>(10, 0.0);
-            force_ = {0.0, 4.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0}; // turn left leg outward
+            force_ = {0.0, 0.0, -4.0, -4.0, 1.0, 0.0, 0.0, -4.0, -4.0, 1.0}; // turn left leg outward
             
         }
 

@@ -47,7 +47,10 @@ def generate_launch_description():
         output='screen',
         arguments=['-string', doc.toxml(),
                    '-name', 'blackbird',
-                   '-allow_renaming', 'true'],
+                   '-allow_renaming', 'true',
+                   '-x', '0.0',
+                   '-y', '0.0',
+                   '-z', '1.25'],
     )
 
     load_joint_state_broadcaster = ExecuteProcess(

@@ -327,7 +327,7 @@
       </collision>
     </link>
     
-    <link name="world"/>
+    <!-- <link name="world"/> -->
 
     <link name="torso">
       <inertial>
@@ -457,11 +457,11 @@
     </joint>
 
 
-    <joint name="world_to_torso" type="fixed">
+    <!-- <joint name="world_to_torso" type="fixed">
         <origin rpy="0 0 0" xyz="0 0 1"/>
         <parent link="world"/>
         <child link="torso"/>
-    </joint>
+    </joint> -->
 
 
     <ros2_control name="IgnitionSystem" type="system">
@@ -590,8 +590,13 @@
           <!-- Bad partices -->
       <parameters>/home/ahoque245/workspaces/ros2_ws/src/ETH_biped/config/blackbird_effort_controller.yaml</parameters>
     </plugin>
-
     </gazebo>
+
+    <!-- contact sensors
+    <gazebo reference="r_foot">
+    </gazebo> -->
+
+    
 
 
   </robot>
