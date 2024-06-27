@@ -30,7 +30,7 @@ def generate_launch_description():
     )
 
 
-    urdf_file = os.path.join(eth_biped_path, 'urdf', 'blackbird.sdf')
+    urdf_file = os.path.join(eth_biped_path, 'urdf', 'blackbird_ign.urdf')
     doc = xacro.parse(open(urdf_file))
     params = {'robot_description': doc.toxml()}
 
