@@ -1,5 +1,5 @@
 # Blackbird Simulation with Gazebo Harmonic
 
-please run `export GZ_SIM_RESOURCE_PATH=/home/ahoque245/ros2_ws/src/ETH_biped_ros2`
+please run `export GZ_SIM_RESOURCE_PATH=<ROS2 WORKSPACE PATH>/<PATH TO REPOSITORY>`
 
 then run `ros2 launch ETH_biped blackbird_ign.launch.py`
