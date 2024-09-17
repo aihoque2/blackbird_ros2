@@ -1,4 +1,4 @@
-# BIPEDAL WALKER SIMULATION WITH IGNITION GAZEBO
+# Blackbird Simulation with Gazebo Harmonic
 
 please run `export GZ_SIM_RESOURCE_PATH=/home/ahoque245/ros2_ws/src/ETH_biped_ros2`
 
