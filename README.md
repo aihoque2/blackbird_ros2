@@ -25,7 +25,7 @@ Please run `export GZ_SIM_RESOURCE_PATH=<ROS2 WORKSPACE PATH>/src/blackbird_ros2
 then run from your workspace directory: 
 `ros2 launch blackbird_ros2 blackbird_gz.launch.py`
 
-![blackbird in gazebo simulation](blackbird_gz.png)
+![blackbird in gazebo simulation](images/blackbird_gz.png)
 
 #### Testing Controllers
 
