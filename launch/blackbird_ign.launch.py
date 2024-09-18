@@ -25,12 +25,12 @@ blackbird_ign.launch.py
 def generate_launch_description():
     use_sim_time = LaunchConfiguration('use_sim_time', default=True)
 
-    eth_biped_path = os.path.join(
-        get_package_share_directory('ETH_biped')
+    blackbird_ros2_path = os.path.join(
+        get_package_share_directory('blackbird_ros2')
     )
 
 
-    urdf_file = os.path.join(eth_biped_path, 'urdf', 'blackbird_ign.urdf')
+    urdf_file = os.path.join(blackbird_ros2_path, 'urdf', 'blackbird.urdf')
     doc = xacro.parse(open(urdf_file))
     params = {'robot_description': doc.toxml()}
 

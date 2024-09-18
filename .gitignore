@@ -2,3 +2,5 @@
 .vscode
 build/
 local_config.bash
+commands.txt
+

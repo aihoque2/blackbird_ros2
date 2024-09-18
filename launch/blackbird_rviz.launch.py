@@ -9,7 +9,7 @@ from launch_ros.actions import Node
 from launch_ros.parameter_descriptions import ParameterValue
 
 def generate_launch_description():
-    pkg_path = get_package_share_path('ETH_biped')
+    pkg_path = get_package_share_path('blackbird_ros2')
     default_model_path = pkg_path / 'urdf/blackbird.urdf'
     default_rviz_config_path = pkg_path / 'rviz/blackbird.rviz'
 
