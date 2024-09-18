@@ -19,7 +19,7 @@ from launch_ros.parameter_descriptions import ParameterValue
 import xacro
 
 """
-blackbird_ign.launch.py
+blackbird_gz.launch.py
 """
 
 def generate_launch_description():
@@ -30,7 +30,7 @@ def generate_launch_description():
     )
 
 
-    urdf_file = os.path.join(blackbird_ros2_path, 'urdf', 'blackbird.urdf')
+    urdf_file = os.path.join(blackbird_ros2_path, 'urdf', 'blackbird_gz.urdf')
     doc = xacro.parse(open(urdf_file))
     params = {'robot_description': doc.toxml()}
 
