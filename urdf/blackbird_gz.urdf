@@ -464,9 +464,9 @@
     </joint> -->
 
 
-    <ros2_control name="IgnitionSystem" type="system">
+    <ros2_control name="GazeboSimSystem" type="system">
         <hardware>
-        <plugin>ign_ros2_control/IgnitionSystem</plugin>
+        <plugin>gz_ros2_control/GazeboSimSystem</plugin>
         </hardware>
 
         <!-- define our hardware interfaces -->
@@ -587,7 +587,7 @@
 
     <gazebo>
     <plugin filename="gz_ros2_control-system" name="gz_ros2_control::GazeboSimROS2ControlPlugin">
-          <!-- Bad partices -->
+          <!-- Bad practices -->
       <parameters>/home/ahoque245/ros2_ws/src/blackbird_ros2/config/blackbird_effort_controller.yaml</parameters>
     </plugin>
     </gazebo>
