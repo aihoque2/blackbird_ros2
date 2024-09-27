@@ -34,4 +34,4 @@ or `ros2 run blackbird_ros2 reverse_effort`
 
 ## Future Work
 
-Develop a control policy that takes in information from `robot_state_publisher`, `joint_state_publisher`, and various sensor data to make the robot truly walk
+Develop a control policy that takes in information from `robot_state_publisher`, `joint_state_publisher`, and various sensor data to make the robot walk
