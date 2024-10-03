@@ -8,6 +8,7 @@ endif()
 # find dependencies
 find_package(ament_cmake REQUIRED)
 find_package(control_msgs REQUIRED)
+find_package(pluginlib REQUIRED)
 find_package(rclcpp REQUIRED)
 find_package(rclcpp_action REQUIRED)
 find_package(std_msgs REQUIRED)
@@ -27,7 +28,7 @@ install(DIRECTORY
 )
 
 # libraries
-add_library(BlackbirdPosePublisher
+add_library(BlackbirdPosePublisher SHARED
 include/PosePublisher.h
 src/PosePublisher.cpp
 )
@@ -61,6 +62,9 @@ install(
   share/${PROJECT_NAME}/
 )
 
+
+pluginlib_export_plugin_description_file(blackbird_ros2 BlackbirdPosePublisher.xml)
+
 # C++ install
 install(TARGETS
   BlackbirdPosePublisher
@@ -81,5 +85,6 @@ if(BUILD_TESTING)
   set(ament_cmake_cpplint_FOUND TRUE)
   ament_lint_auto_find_test_dependencies()
 endif()
+
 
 ament_package()

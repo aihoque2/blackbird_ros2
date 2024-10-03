@@ -1,0 +1,10 @@
+<library path="BlackbirdPosePublisher">
+  <class
+    name="blackbird_pose_publisher"
+    type="blackbird_ros2::BlackbirdPosePublisher"
+    base_class_type="blackbird_ros2::BlackbirdPosePublisher">
+    <description>
+    Blackbird Pose publisher
+    </description>
+  </class>
+</library>

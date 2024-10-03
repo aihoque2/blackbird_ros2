@@ -1,6 +1,6 @@
 #include "PosePublisher.h"
 
-namespace blackbrid_ros2{
+namespace blackbird_ros2{
 
     BlackbirdPosePublisher::BlackbirdPosePublisher(){
         node_ = rclcpp::Node::make_shared("pose_publisher");
@@ -66,8 +66,8 @@ namespace blackbrid_ros2{
     }
 }
 GZ_ADD_PLUGIN(
-    blackbird_ros2::PosePublisher,
+    blackbird_ros2::BlackbirdPosePublisher,
     gz::sim::System,
-    blackbird_ros2::PosePublisher::ISystemConfigure,
-    blackbird_ros2::PosePublisher::ISystemPostUpdate,
+    blackbird_ros2::BlackbirdPosePublisher::ISystemConfigure,
+    blackbird_ros2::BlackbirdPosePublisher::ISystemPostUpdate
 )

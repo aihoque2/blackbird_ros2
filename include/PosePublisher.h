@@ -14,7 +14,7 @@
 #include <gz/math/Quaternion.hh>
 #include <gz/sim/System.hh>
 
-//#include <gz/plugin/Resiter.hh>
+#include <gz/plugin/Register.hh>
 
 #include <rclcpp/rclcpp.hpp>
 #include <geometry_msgs/msg/pose.hpp>
@@ -22,7 +22,7 @@
 #ifndef BLACKBIRDROS2_POSEPUBLISHER_HH_
 #define BLACKBIRDROS2_POSEPUBLISHER_HH_
 
-namespace blackbrid_ros2{
+namespace blackbird_ros2{
 class BlackbirdPosePublisher : public gz::sim::System,
                                 public gz::sim::ISystemConfigure, 
                                 public gz::sim::ISystemPostUpdate
