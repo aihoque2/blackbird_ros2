@@ -1,4 +1,4 @@
-<library path="BlackbirdPosePublisher">
+<library path="libBlackbirdPosePublisher.so">
   <class
     name="blackbird_pose_publisher"
     type="blackbird_ros2::BlackbirdPosePublisher"

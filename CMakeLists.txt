@@ -26,6 +26,10 @@ install(DIRECTORY
   include/
   DESTINATION include
 )
+install(
+  FILES BlackbirdPosePublisher.xml
+  DESTINATION share/${PROJECT_NAME}
+)
 
 # libraries
 add_library(BlackbirdPosePublisher SHARED
@@ -86,5 +90,8 @@ if(BUILD_TESTING)
   ament_lint_auto_find_test_dependencies()
 endif()
 
+ament_export_include_directories(
+  include
+)
 
 ament_package()

@@ -30,6 +30,12 @@ don't forget
 `export GAZEBO_PLUGIN_PATH=$GAZEBO_PLUGIN_PATH:~/ros2_ws/install/blackbird_ros2/lib/blackbird_ros2`
 
 
+## Extra topics
+
+### PosePublisher
+Extract pose information from the blackbird entity,
+as calculated in the Gazebo simulation.
+
 ![blackbird in gazebo simulation](images/blackbird_gz.png)
 
 #### Testing Controllers
@@ -39,4 +45,4 @@ or `ros2 run blackbird_ros2 reverse_effort`
 
 ## Future Work
 
-Develop a control policy that takes in information from `robot_state_publisher`, `joint_state_publisher`, and various sensor data to make the robot walk
+Develop a control policy that takes in information from the `/torso_pose` topic,

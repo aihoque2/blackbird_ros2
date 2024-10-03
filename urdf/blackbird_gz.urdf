@@ -590,7 +590,7 @@
           <!-- Bad practices -->
       <parameters>/home/ahoque245/ros2_ws/src/blackbird_ros2/config/blackbird_effort_controller.yaml</parameters>
     </plugin>
-    <plugin name="blackbird_pose_publisher" filename="blackbird_ros2::BlackbirdPosePublisher">
+    <plugin name="blackbird_pose_publisher" filename="libBlackbirdPosePublisher.so">
     </plugin>
     </gazebo>
 
