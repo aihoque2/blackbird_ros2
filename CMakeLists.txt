@@ -13,17 +13,46 @@ find_package(rclcpp_action REQUIRED)
 find_package(std_msgs REQUIRED)
 find_package(geometry_msgs REQUIRED)
 find_package(gz-sim8 REQUIRED)
+
+find_package(gz-plugin2 REQUIRED)
+
 # uncomment the following section in order to fill in
 # further dependencies manually.
 # find_package(<dependency> REQUIRED)
 
+# directory install
+install(DIRECTORY
+  include/
+  DESTINATION include
+)
+
+# libraries
+add_library(BlackbirdPosePublisher
+include/PosePublisher.h
+src/PosePublisher.cpp
+)
+
+target_include_directories(BlackbirdPosePublisher PRIVATE include)
+target_link_libraries(BlackbirdPosePublisher 
+gz-sim8::gz-sim8
+gz-plugin2::gz-plugin2
+)
+
+ament_target_dependencies(BlackbirdPosePublisher
+  rclcpp
+  geometry_msgs
+  std_msgs
+)
+
+#executables
 add_executable(effort_example_cpp src/effort_example.cpp)
 ament_target_dependencies(effort_example_cpp rclcpp std_msgs)
 
 add_executable(reverse_effort_cpp src/reverse_effort.cpp)
 ament_target_dependencies(reverse_effort_cpp rclcpp std_msgs)
 
-# directory install
+
+
 install(
   DIRECTORY 
   launch rviz urdf meshes config src
@@ -34,6 +63,7 @@ install(
 
 # C++ install
 install(TARGETS
+  BlackbirdPosePublisher
   effort_example_cpp
   reverse_effort_cpp
   DESTINATION lib/${PROJECT_NAME}

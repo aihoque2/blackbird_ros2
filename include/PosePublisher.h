@@ -9,16 +9,27 @@
 #include <vector>
 
 #include <gz/sim/components/Pose.hh>
+#include <gz/sim/components/Name.hh>
+#include <gz/math/Vector3.hh>
+#include <gz/math/Quaternion.hh>
+#include <gz/sim/System.hh>
+
+//#include <gz/plugin/Resiter.hh>
 
 #include <rclcpp/rclcpp.hpp>
-#include <geometry_msgs/msg/Pose.hpp
+#include <geometry_msgs/msg/pose.hpp>
 
-class BlackbirdPosePublisher: gz::sim::ISystemConfigure, 
-                                gz::sim::ISystemPostUpdate
+#ifndef BLACKBIRDROS2_POSEPUBLISHER_HH_
+#define BLACKBIRDROS2_POSEPUBLISHER_HH_
+
+namespace blackbrid_ros2{
+class BlackbirdPosePublisher : public gz::sim::System,
+                                public gz::sim::ISystemConfigure, 
+                                public gz::sim::ISystemPostUpdate
 {
     public:
-        BlackBirdPosePublisher();
-        ~BlackBirdPosePublisher();
+        BlackbirdPosePublisher();
+        ~BlackbirdPosePublisher();
 
         void Configure(const gz::sim::Entity& entity,
                        const std::shared_ptr<const sdf::Element>&,
@@ -27,9 +38,9 @@ class BlackbirdPosePublisher: gz::sim::ISystemConfigure,
         
         void PostUpdate(const gz::sim::UpdateInfo &_info,
                                 const gz::sim::EntityComponentManager &ecm);
-
-        rclcpp::Node node_;
-        rclcpp::Publisher<geometry_msgs::msg::Pose> pub_;
+        
+        void UpdatePoses(const gz::sim::EntityComponentManager &ecm); 
+        
         
         // position
         double x;
@@ -42,4 +53,10 @@ class BlackbirdPosePublisher: gz::sim::ISystemConfigure,
         double q3;
         double w;
 
+    private:
+        std::shared_ptr<rclcpp::Node> node_;
+        rclcpp::Publisher<geometry_msgs::msg::Pose>::SharedPtr pub_;
+        geometry_msgs::msg::Pose msg_;
+};
 }
+#endif
