@@ -26,10 +26,6 @@ install(DIRECTORY
   include/
   DESTINATION include
 )
-install(
-  FILES BlackbirdPosePublisher.xml
-  DESTINATION share/${PROJECT_NAME}
-)
 
 # libraries
 add_library(BlackbirdPosePublisher SHARED
@@ -38,12 +34,10 @@ src/PosePublisher.cpp
 )
 
 target_include_directories(BlackbirdPosePublisher PRIVATE include)
-target_link_libraries(BlackbirdPosePublisher 
-gz-sim8::gz-sim8
-gz-plugin2::gz-plugin2
-)
 
 ament_target_dependencies(BlackbirdPosePublisher
+  gz-sim8
+  gz-plugin2
   rclcpp
   geometry_msgs
   std_msgs
@@ -66,8 +60,6 @@ install(
   share/${PROJECT_NAME}/
 )
 
-
-pluginlib_export_plugin_description_file(blackbird_ros2 BlackbirdPosePublisher.xml)
 
 # C++ install
 install(TARGETS

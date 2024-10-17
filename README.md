@@ -27,7 +27,7 @@ then run from your workspace directory:
 
 don't forget
 
-`export GAZEBO_PLUGIN_PATH=$GAZEBO_PLUGIN_PATH:~/ros2_ws/install/blackbird_ros2/lib/blackbird_ros2`
+`export GZ_SIM_SYSTEM_PLUGIN_PATH=~/ros2_ws/install/blackbird_ros2/lib/blackbird_ros2`
 
 
 ## Extra topics
