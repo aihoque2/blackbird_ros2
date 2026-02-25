@@ -38,7 +38,12 @@ the gym training environment in the parent package to this: https://github.com/a
 
 ### PosePublisher
 Extract pose information from the blackbird entity,
-as calculated in the Gazebo simulation.
+as calculated in the Gazebo simulation. 
+
+###### Currently,
+it is publishing `torso_pose`, but I will be updating it shortly
+in order to test some real time policies (I need my control policies 
+to work in train env first :))
 
 ![blackbird in gazebo simulation](images/blackbird_gz.png)
 

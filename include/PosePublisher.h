@@ -18,6 +18,7 @@
 #include <gz/plugin/Register.hh>
 
 #include <rclcpp/rclcpp.hpp>
+#include <rclcpp/executors/single_threaded_executor.hpp>
 #include <geometry_msgs/msg/pose.hpp>
 
 #ifndef BLACKBIRDROS2_POSEPUBLISHER_HH_
@@ -56,6 +57,7 @@ class BlackbirdPosePublisher : public gz::sim::System,
 
     private:
         rclcpp::Context::SharedPtr context_;
+        rclcpp::executors::SingleThreadedExecutor exec_;
         std::thread spin_thread_;
         
         std::shared_ptr<rclcpp::Node> node_;

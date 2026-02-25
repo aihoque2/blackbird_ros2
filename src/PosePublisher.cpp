@@ -2,20 +2,20 @@
 
 namespace blackbird_ros2{
 
-        BlackbirdPosePublisher::BlackbirdPosePublisher(){
-    context_ = std::make_shared<rclcpp::Context>();
-    context_->init(0, nullptr);
+    BlackbirdPosePublisher::BlackbirdPosePublisher(){
+        context_ = std::make_shared<rclcpp::Context>();
+        context_->init(0, nullptr);
 
-    rclcpp::NodeOptions opts;
-    opts.context(context_);
+        rclcpp::NodeOptions opts;
+        opts.context(context_);
 
-    node_ = std::make_shared<rclcpp::Node>("pose_publisher", opts);
-    pub_  = node_->create_publisher<geometry_msgs::msg::Pose>("/torso_pose", 10);
+        node_ = std::make_shared<rclcpp::Node>("pose_publisher", opts);
+        pub_  = node_->create_publisher<geometry_msgs::msg::Pose>("/torso_pose", 10);
 
-    exec_.add_node(node_);
-    spin_thread_ = std::thread([this]() { exec_.spin(); });
+        exec_.add_node(node_);
+        spin_thread_ = std::thread([this]() { exec_.spin(); });
 
-            
+                
         x = 0.0;
         y = 0.0;
         z = 0.0;
@@ -28,7 +28,9 @@ namespace blackbird_ros2{
     BlackbirdPosePublisher::~BlackbirdPosePublisher(){
         exec_.cancel();
         if (spin_thread_.joinable()) spin_thread_.join();
-        if (context_ && context_->is_valid()) context_->shutdown();    
+        if (context_ && context_->is_valid()) {
+            context_->shutdown("BlackbirdPosePublisher Context shutting down...");
+        }
     }
 
     void BlackbirdPosePublisher::UpdatePoses(const gz::sim::EntityComponentManager &ecm){
@@ -60,16 +62,16 @@ namespace blackbird_ros2{
         msg_.orientation.w = w;
     }
 
-    void BlackbirdPosePublisher::Configure(const gz::sim::Entity& entity,
+    void BlackbirdPosePublisher::Configure(const gz::sim::Entity& /*entity*/,
                         const std::shared_ptr<const sdf::Element>&,
                         gz::sim::EntityComponentManager& ecm,
-                        gz::sim::EventManager& event_mgr)
+                        gz::sim::EventManager& /*event_mgr*/)
     {
         UpdatePoses(ecm);
         // TODO: Initialize velocity to zero
     }
 
-   void BlackbirdPosePublisher::PostUpdate(const gz::sim::UpdateInfo &_info,
+   void BlackbirdPosePublisher::PostUpdate(const gz::sim::UpdateInfo &/*_info*/,
                                     const gz::sim::EntityComponentManager &ecm)
     {
         // TODO: update velocities before establishing new poses
