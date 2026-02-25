@@ -32,7 +32,8 @@ def generate_launch_description():
 
     urdf_file = os.path.join(blackbird_ros2_path, 'urdf', 'blackbird_gz.urdf')
     doc = xacro.parse(open(urdf_file))
-    params = {'robot_description': doc.toxml()}
+    params = {'robot_description': doc.toxml(),
+                'use_sim_time': use_sim_time}
 
     robot_state_publisher = Node(
         package='robot_state_publisher',
