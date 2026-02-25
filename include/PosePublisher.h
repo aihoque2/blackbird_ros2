@@ -7,6 +7,7 @@
 #include <thread>
 #include <utility>
 #include <vector>
+#include <unordered_map>
 
 #include <gz/sim/components/Pose.hh>
 #include <gz/sim/components/Name.hh>
@@ -54,6 +55,9 @@ class BlackbirdPosePublisher : public gz::sim::System,
         double w;
 
     private:
+        rclcpp::Context::SharedPtr context_;
+        std::thread spin_thread_;
+        
         std::shared_ptr<rclcpp::Node> node_;
         rclcpp::Publisher<geometry_msgs::msg::Pose>::SharedPtr pub_;
         geometry_msgs::msg::Pose msg_;
