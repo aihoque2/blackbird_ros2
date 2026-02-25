@@ -8,7 +8,7 @@
 
 class JointPub: public rclcpp::Node{
     public:
-        JointPub() : Node("effort_control_example") 
+        JointPub() : Node("reverse_effort") 
         {
             pub_ = this->create_publisher<std_msgs::msg::Float64MultiArray>("/effort_controller/commands", 10);   
             timer_ = this->create_wall_timer(std::chrono::milliseconds(500), std::bind(&JointPub::timer_callback, this));

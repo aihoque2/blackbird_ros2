@@ -22,13 +22,17 @@ Please run `export GZ_SIM_RESOURCE_PATH=<ROS2 WORKSPACE PATH>/src/blackbird_ros2
 
 *Example:* `export GZ_SIM_RESOURCE_PATH=~/ros2_ws/src/blackbird_ros2`
 
+don't forget after running `colcon build`:
+`export GZ_SIM_SYSTEM_PLUGIN_PATH=~/<ROS2 WORKSPACE PATH>/install/blackbird_ros2/lib/blackbird_ros2`
+
+*Example:* `export GZ_SIM_SYSTEM_PLUGIN_PATH=~/ros2_ws/install/blackbird_ros2/lib/blackbird_ros2`
+
 then run from your workspace directory: 
 `ros2 launch blackbird_ros2 blackbird_gz.launch.py`
 
-don't forget
 
-`export GZ_SIM_SYSTEM_PLUGIN_PATH=~/ros2_ws/install/blackbird_ros2/lib/blackbird_ros2`
-
+if you want to use the installed plugin to view the same State data that you'll find in 
+the gym training environment in the parent package to this: https://github.com/aihoque2/blackbird_walking
 
 ## Extra topics
 

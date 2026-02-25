@@ -50,7 +50,7 @@ def generate_launch_description():
                    '-allow_renaming', 'true',
                    '-x', '0.0',
                    '-y', '0.0',
-                   '-z', '1.25'],
+                   '-z', '1.10'],
     )
 
     load_joint_state_broadcaster = ExecuteProcess(
