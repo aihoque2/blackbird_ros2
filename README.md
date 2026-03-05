@@ -15,17 +15,12 @@ Gazebo Harmonic
 
 ## Rviz
 
-please run `ros2 launch blackbird_ros2 blackbird_rviz.launch.py` 
+From workspace directory, please run `ros2 launch blackbird_ros2 blackbird_rviz.launch.py` 
 
 ## Gazebo simulation
-Please run `export GZ_SIM_RESOURCE_PATH=<ROS2 WORKSPACE PATH>/src/blackbird_ros2`
+From workspace directory, please run `colcon build`
 
-*Example:* `export GZ_SIM_RESOURCE_PATH=~/ros2_ws/src/blackbird_ros2`
-
-don't forget after running `colcon build`:
-`export GZ_SIM_SYSTEM_PLUGIN_PATH=~/<ROS2 WORKSPACE PATH>/install/blackbird_ros2/lib/blackbird_ros2`
-
-*Example:* `export GZ_SIM_SYSTEM_PLUGIN_PATH=~/ros2_ws/install/blackbird_ros2/lib/blackbird_ros2`
+then do a `source install/setup.bash`
 
 then run from your workspace directory: 
 `ros2 launch blackbird_ros2 blackbird_gz.launch.py`
@@ -43,7 +38,7 @@ as calculated in the Gazebo simulation.
 ###### Currently,
 it is publishing `torso_pose`, but I will be updating it shortly
 in order to test some real time policies (I need my control policies 
-to work in train env first :))
+to work in train env first :) )
 
 ![blackbird in gazebo simulation](images/blackbird_gz.png)
 
