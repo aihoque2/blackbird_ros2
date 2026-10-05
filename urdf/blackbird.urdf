@@ -381,22 +381,6 @@
       <limit lower="-2" upper="2" effort="50" velocity="20"/>
     </joint>
 
-    <joint name="l_ankle" type="revolute">
-      <origin xyz="0 -0.1529 -0.42302" rpy="0 0 0"/>
-      <parent link="l_lower"/>
-      <child link="l_foot"/>
-      <axis xyz="1.0 0 0"/>
-      <limit lower="-1.5708" upper="0.69813" effort="50" velocity="20"/>
-    </joint>
-
-    <joint name="l_knee" type="revolute">
-      <origin xyz="0 0.1529 -0.42302" rpy="0 0 0"/>
-      <parent link="l_upper"/>
-      <child link="l_lower"/>
-      <axis xyz="1.0 0 0"/>
-      <limit lower="-2.0944" upper="0.34907" effort="50" velocity="20"/>
-    </joint>
-
     <joint name="l_hip_pitch" type="revolute">
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <parent link="l_yaw"/>
@@ -413,11 +397,43 @@
       <limit lower="-2" upper="2" effort="50" velocity="20"/>
     </joint>
 
+    <joint name="l_ankle" type="revolute">
+      <origin xyz="0 -0.1529 -0.42302" rpy="0 0 0"/>
+      <parent link="l_lower"/>
+      <child link="l_foot"/>
+      <axis xyz="1.0 0 0"/>
+      <limit lower="-1.5708" upper="0.69813" effort="50" velocity="20"/>
+    </joint>
+
+    <joint name="l_knee" type="revolute">
+      <origin xyz="0 0.1529 -0.42302" rpy="0 0 0"/>
+      <parent link="l_upper"/>
+      <child link="l_lower"/>
+      <axis xyz="1.0 0 0"/>
+      <limit lower="-2.0944" upper="0.34907" effort="50" velocity="20"/>
+    </joint>
+
     <joint name="r_hip_roll" type="revolute">
       <origin xyz="-0.15 0 0" rpy="0 0 0"/>
       <parent link="torso"/>
       <child link="r_ab_ad"/>
       <axis xyz="0 -1.0 0"/>
+      <limit lower="-2" upper="2" effort="50" velocity="20"/>
+    </joint>
+
+    <joint name="r_hip_pitch" type="revolute">
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <parent link="r_yaw"/>
+      <child link="r_upper"/>
+      <axis xyz="1.0 0 0"/>
+      <limit lower="-1.91986" upper="1.22173" effort="50" velocity="20"/>
+    </joint>
+
+    <joint name="r_hip_yaw" type="revolute">
+      <origin xyz="0 0 -0.1295" rpy="0 0 0"/>
+      <parent link="r_ab_ad"/>
+      <child link="r_yaw"/>
+      <axis xyz="0 0 1.0"/>
       <limit lower="-2" upper="2" effort="50" velocity="20"/>
     </joint>
 
@@ -437,21 +453,6 @@
       <limit lower="-2.0944" upper="0.34907" effort="50" velocity="20"/>
     </joint>
 
-    <joint name="r_hip_pitch" type="revolute">
-      <origin xyz="0 0 0" rpy="0 0 0"/>
-      <parent link="r_yaw"/>
-      <child link="r_upper"/>
-      <axis xyz="1.0 0 0"/>
-      <limit lower="-1.91986" upper="1.22173" effort="50" velocity="20"/>
-    </joint>
-
-    <joint name="r_hip_yaw" type="revolute">
-      <origin xyz="0 0 -0.1295" rpy="0 0 0"/>
-      <parent link="r_ab_ad"/>
-      <child link="r_yaw"/>
-      <axis xyz="0 0 1.0"/>
-      <limit lower="-2" upper="2" effort="50" velocity="20"/>
-    </joint>
 
     <joint name="world_to_torso" type="fixed">
         <origin rpy="0 0 0" xyz="0 0 1"/>
